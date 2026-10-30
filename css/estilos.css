@@ -1,0 +1,269 @@
+
+/* ESTILOS GENERALES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f0;
+    color: #26382a;
+    line-height: 1.6;
+}
+
+/* CABECERA */
+header {
+    background-color: #173d2b;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+header h1 {
+    font-size: 38px;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #d8e8d5;
+    font-size: 17px;
+}
+
+/* MENU DE NAVEGACION */
+nav {
+    background-color: #285b3b;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #477d50;
+}
+
+/* PORTADA */
+.portada {
+    min-height: 390px;
+    padding: 90px 20px;
+    text-align: center;
+    color: white;
+    background:
+        linear-gradient(rgba(15, 48, 29, 0.72),
+                        rgba(15, 48, 29, 0.72)),
+        url("https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+}
+
+.portada h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.portada p {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    font-size: 18px;
+}
+
+/* BOTONES */
+.boton {
+    display: inline-block;
+    background-color: #a5c96a;
+    color: #173d2b;
+    padding: 13px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+.boton:hover {
+    background-color: #c1df8e;
+}
+
+/* BIENVENIDA */
+.bienvenida {
+    max-width: 900px;
+    margin: 45px auto;
+    padding: 35px 25px;
+    text-align: center;
+}
+
+.bienvenida h2 {
+    color: #285b3b;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.bienvenida p {
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+
+/* PIE DE PAGINA */
+footer {
+    background-color: #173d2b;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    margin-top: 30px;
+}
+
+/* ADAPTACION A MOVILES */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    .portada {
+        padding: 65px 18px;
+    }
+
+    .portada h2 {
+        font-size: 30px;
+    }
+
+    nav {
+        gap: 4px;
+    }
+
+    nav a {
+        padding: 8px 10px;
+    }
+}
+
+/* TARJETAS DE SERVICIOS */
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+    margin: 35px 0;
+    text-align: left;
+}
+
+.tarjeta {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 5px solid #6f9e55;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.13);
+}
+
+.tarjeta h3 {
+    color: #285b3b;
+    margin-bottom: 12px;
+}
+
+.tarjeta p {
+    font-size: 15px;
+}
+
+/* GALERÍA DE FOTOGRAFÍAS */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
+    margin: 30px 0;
+}
+
+.galeria article {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.galeria img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.galeria h3 {
+    color: #285b3b;
+    padding: 15px;
+}
+
+/* FORMULARIO DE CONTACTO */
+#formulario-contacto {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+    text-align: left;
+}
+
+#formulario-contacto label {
+    display: block;
+    margin: 15px 0 6px;
+    color: #285b3b;
+    font-weight: bold;
+}
+
+#formulario-contacto input,
+#formulario-contacto select,
+#formulario-contacto textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5c0;
+    border-radius: 6px;
+    font: inherit;
+    box-sizing: border-box;
+}
+
+#formulario-contacto textarea {
+    resize: vertical;
+}
+
+#formulario-contacto button {
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* TABLA DE SERVICIOS */
+.tabla-servicios {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.tabla-servicios th {
+    background-color: #285b3b;
+    color: white;
+    padding: 14px;
+    text-align: left;
+}
+
+.tabla-servicios td {
+    padding: 14px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.tabla-servicios tr:hover {
+    background-color: #edf4e9;
+}

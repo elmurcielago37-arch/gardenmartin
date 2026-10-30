@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | GARDEN MARTIN</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <h1>🌿 GARDEN MARTIN</h1>
+        <p>Estamos aquí para ayudarte con tu jardín</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="galeria.html">Galería</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <main class="bienvenida">
+        <h2>Contacta con nosotros</h2>
+        <p>Cuéntanos qué necesitas y nos pondremos en contacto contigo.</p>
+
+        <form id="formulario-contacto">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="servicio">Servicio que te interesa:</label>
+            <select id="servicio" name="servicio" required>
+                <option value="">Selecciona un servicio</option>
+                <option value="Mantenimiento de jardines">Mantenimiento de jardines</option>
+                <option value="Poda">Poda</option>
+                <option value="Diseño de jardines">Diseño de jardines</option>
+                <option value="Riego automático">Riego automático</option>
+                <option value="Piscinas">Mantenimiento de piscinas</option>
+            </select>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+            <button class="boton" type="submit">Enviar solicitud</button>
+        </form>
+
+        <p id="respuesta-formulario"></p>
+        <p>📍 Zona de trabajo: Marbella y alrededores.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 GARDEN MARTIN | autor web Ruben Perez </p>
+    </footer>
+
+    <script src="js/funciones.js"></script>
+</body>
+</html>
